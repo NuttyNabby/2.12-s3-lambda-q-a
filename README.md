@@ -22,6 +22,7 @@ In the case of an S3-triggered Lambda, the resource-based policy:
 Without this policy, S3 cannot trigger the Lambda function, even if the function has execution permissions.
 
 **3. If the function needs to upload a file into an S3 bucket, what changes are needed?**
+
 🔹 Update to the Execution Role
 - Add s3:PutObject permission to allow the Lambda function to upload files to the target S3 bucket.
 - Optionally, add s3:ListBucket if the function needs to verify bucket contents.
